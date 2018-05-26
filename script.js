@@ -31,6 +31,8 @@ var Restaurants = /** @class */ (function (_super) {
         var _this = _super.call(this, Name, Adress, ZipCode, City, Images) || this;
         _this.RestType = RestType;
         _this.PhoneNumb = PhoneNumb;
+        _this.RestType = RestType;
+        _this.PhoneNumb = PhoneNumb;
         return _this;
     }
     return Restaurants;
@@ -41,16 +43,18 @@ var Events = /** @class */ (function (_super) {
         var _this = _super.call(this, Name, Adress, ZipCode, City, Images) || this;
         _this.EventDate = EventDate;
         _this.EventPrice = EventPrice;
+        _this.EventDate = EventDate;
+        _this.EventPrice = EventPrice;
         return _this;
     }
     return Events;
 }(Locations));
-var place1 = new Places("St. Charles Church", "Karlsplatz 1", "1010", "Vienna", "img/place1.jpg", Places);
-var place2 = new Places("Zoo Vienna", "Maxingstraße 13b", "1130", "Vienna", "img/place1.jpg", Places);
-var events1 = new Events("Kris Kristofferson", "Wiener Stadthalle, Halle F, Roland Rainer Platz 1", "1150", "Vienna", "imgsource", "Fr., 15. Jun. 20:00", "58,50 EUR", Events);
-var events2 = new Events("Lenny Kravitz", "Wiener Stadthalle - Halle D, Roland Rainer Platz 1", "1150", "Vienna", "imgsource", "Sat, 09.06.2018 - 19:30", "€ 47,80", Events);
-var restaurant1 = new Restaurants("Lemon Leaf", "Kettenbrückengasse 19", "1050", "Vienna", "imgsource", "Thai", "+43(1)5812308", Restaurants);
-var restaurant2 = new Restaurants("SIXTA", "Schönbrunner Straße 21", "1050", "Vienna", "imgsource", "wienerisch", "+43 1 58 528 56 <br> +43 1 58 528 56", Restaurants);
+var place1 = new Places("St. Charles Church", "Karlsplatz 1", 1010, "Vienna", "img/place1.jpg", Places);
+var place2 = new Places("Zoo Vienna", "Maxingstraße 13b", 1130, "Vienna", "img/place1.jpg", Places);
+var events1 = new Events("Kris Kristofferson", "Wiener Stadthalle, Halle F, Roland Rainer Platz 1", 1150, "Vienna", "imgsource", "Fr., 15.06.2018 - 20:00", "58,50 EUR", Events);
+var events2 = new Events("Lenny Kravitz", "Wiener Stadthalle - Halle D, Roland Rainer Platz 1", 1150, "Vienna", "imgsource", "Sat., 09.06.2018 - 19:30", "€ 47,80", Events);
+var restaurant1 = new Restaurants("Lemon Leaf", "Kettenbrückengasse 19", 1050, "Vienna", "imgsource", "Thai", 4315812308, Restaurants);
+var restaurant2 = new Restaurants("SIXTA", "Schönbrunner Straße 21", 1050, "Vienna", "imgsource", "wienerisch", 4315852856, Restaurants);
 var locations_data = [];
 locations_data.push(place1, place2, events1, events2, restaurant1, restaurant2);
 function render() {
