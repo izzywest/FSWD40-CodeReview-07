@@ -36,7 +36,7 @@ class Events extends Locations {
 let place1 = new Places("St. Charles Church", "Karlsplatz 1", 1010, "Vienna", "img/place1.jpg", Places)
 let place2 = new Places("Zoo Vienna", "Maxingstraße 13b", 1130, "Vienna", "img/place1.jpg", Places)
 let events1 = new Events("Kris Kristofferson", "Wiener Stadthalle, Halle F, Roland Rainer Platz 1", 1150, "Vienna", "imgsource", "Fr., 15.06.2018 - 20:00", "58,50 EUR", Events)
-let events2 = new Events("Lenny Kravitz", "Wiener Stadthalle - Halle D, Roland Rainer Platz 1", 1150, "Vienna", "imgsource", "Sat., 09.06.2018 - 19:30", "€ 47,80", Events)
+let events2 = new Events("Lenny Kravitz", "Wiener Stadthalle - Halle D, Roland Rainer Platz 1", 1150, "Vienna", "imgsource", "Sat., 09.06.2018 - 19:30", "47,80 EUR", Events)
 let restaurant1 = new Restaurants("Lemon Leaf", "Kettenbrückengasse 19", 1050, "Vienna", "imgsource", "Thai", 4315812308, "www.lemonleaf.at", Restaurants)
 let restaurant2 = new Restaurants("SIXTA", "Schönbrunner Straße 21", 1050, "Vienna", "imgsource", "wienerisch", 4315852856, "http://www.sixta-restaurant.at/", Restaurants)
 
