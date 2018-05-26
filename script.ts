@@ -14,10 +14,11 @@ class Places extends Locations {
 
 class Restaurants extends Locations {
 
-	constructor(Name, Adress, ZipCode, City, Images, private RestType: String, private PhoneNumb: number, type){
+	constructor(Name, Adress, ZipCode, City, Images, private RestType: String, private PhoneNumb: number, private Website: String, type){
 		super(Name, Adress, ZipCode, City, Images);
 		this.RestType = RestType;
 		this.PhoneNumb = PhoneNumb;
+		this.Website = Website;
 	}
 }
 
@@ -36,8 +37,8 @@ let place1 = new Places("St. Charles Church", "Karlsplatz 1", 1010, "Vienna", "i
 let place2 = new Places("Zoo Vienna", "Maxingstraße 13b", 1130, "Vienna", "img/place1.jpg", Places)
 let events1 = new Events("Kris Kristofferson", "Wiener Stadthalle, Halle F, Roland Rainer Platz 1", 1150, "Vienna", "imgsource", "Fr., 15.06.2018 - 20:00", "58,50 EUR", Events)
 let events2 = new Events("Lenny Kravitz", "Wiener Stadthalle - Halle D, Roland Rainer Platz 1", 1150, "Vienna", "imgsource", "Sat., 09.06.2018 - 19:30", "€ 47,80", Events)
-let restaurant1 = new Restaurants("Lemon Leaf", "Kettenbrückengasse 19", 1050, "Vienna", "imgsource", "Thai", 4315812308, Restaurants)
-let restaurant2 = new Restaurants("SIXTA", "Schönbrunner Straße 21", 1050, "Vienna", "imgsource", "wienerisch", 4315852856, Restaurants)
+let restaurant1 = new Restaurants("Lemon Leaf", "Kettenbrückengasse 19", 1050, "Vienna", "imgsource", "Thai", 4315812308, "www.lemonleaf.at", Restaurants)
+let restaurant2 = new Restaurants("SIXTA", "Schönbrunner Straße 21", 1050, "Vienna", "imgsource", "wienerisch", 4315852856, "http://www.sixta-restaurant.at/", Restaurants)
 
 
 let locations_data = []
@@ -96,6 +97,11 @@ function render(){
  	var EventPrice_text = document.createTextNode(locations_data[i].EventPrice);
  	EventPrice.appendChild(EventPrice_text);
 	insText.appendChild(EventPrice);
+
+	var Website = document.createElement("p");
+ 	var Website_text = document.createTextNode(locations_data[i].Website);
+ 	Website.appendChild(Website_text);
+	insText.appendChild(Website);
 
 	}
 }
